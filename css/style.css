@@ -131,6 +131,24 @@ body{
     }
 }
 
+.qr-container{
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+.qr-img{
+    position: absolute;
+    margin:auto;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    width:250px;
+    height:250px;
+}
 
+.qr-img img{
+    width:250px;
+}
 
 
