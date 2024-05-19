@@ -18,5 +18,5 @@ function changeMode() {
         user_info.style.color="black";
         count+=1
     }
-    video.play(); 
+    video.load(); 
 }
