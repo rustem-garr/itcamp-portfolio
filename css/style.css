@@ -1,16 +1,21 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-body{
+/* Применяем стандартное поведение для всех элементов, устанавливаем значение box-sizing в border-box,
+   обнуляем отступы и внутренние поля */
+
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Устанавливаем шрифт для всего документа */
 
-.main{
-    height:100vh;
-    position:relative;
+.main {
+    height: 100vh;
+    position: relative;
 }
+/* Устанавливаем высоту основного контейнера на 100% высоты экрана, задаем относительное позиционирование */
 
 #background-video {
     position: absolute;
@@ -18,86 +23,95 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire background */
-    z-index: -1; /* Place the video behind other content */
+    object-fit: cover; /* Убедиться, что видео покрывает весь фон */
+    z-index: -1; /* Разместить видео позади другого содержимого */
 }
+/* Настройки для фонового видео, чтобы оно занимало весь экран и располагалось позади остальных элементов */
 
-#card{
-    height:500px;
-    width:320px;
-    background-color: rgb(52, 50, 50); 
-    margin:auto;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    border-radius:45px;
+#card {
+    height: 500px;
+    width: 320px;
+    background-color: rgb(52, 50, 50);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 45px;
 }
+/* Стиль для карточки с информацией: размер, цвет фона, центрирование, закругленные углы */
 
-#user-info{
+#user-info {
     text-align: center;
-    color:white;
-    font-size:20px;
+    color: white;
+    font-size: 20px;
     letter-spacing: 1px;
 }
+/* Центрирование текста и установка стиля для информации о пользователе */
 
-#user-info p{
-    margin:10px auto;
+#user-info p {
+    margin: 10px auto;
 }
+/* Отступы для абзацев в информации о пользователе */
 
-.a-mode{
+#modeImg {
     display: block;
-    width:fit-content;
-    margin:15px auto auto;
+    width: 35px;
+    margin: 15px auto auto;
+    cursor: pointer;
 }
+/* Ширина изображения кнопки смены режима */
 
-#modeImg{
-    width:35px;
-}
-
-#myImg{
+#myImg {
     display: block;
-    margin:15px auto;
-    width:150px;
-    height:150px;
+    margin: 15px auto;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
+/* Стиль для изображения профиля: центрирование, размеры, закругленные края */
 
-.logo-div{
-    width:100%;
-    border-top:1px solid white;
+.logo-div {
+    width: 100%;
+    border-top: 1px solid white;
     text-align: center;
-    margin-top:20px;
+    margin-top: 20px;
 }
+/* Контейнер для логотипов социальных сетей: ширина, верхняя граница, центрирование, отступ сверху */
 
-.logo{
+.logo {
     display: inline-block;
-    width:50px;
-    height:50px;
-    margin:35px 5px;
+    width: 50px;
+    height: 50px;
+    margin: 35px 5px;
 }
+/* Стиль для каждого логотипа: блочный элемент, размеры, отступы */
 
-.logo img{
-    width:50px;
+.logo img {
+    width: 50px;
 }
+/* Ширина изображений логотипов */
 
-.portfolio-div{
-    width:100%;
+.portfolio-div {
+    width: 100%;
     text-align: center;
 }
+/* Контейнер для ссылки на портфолио: ширина, центрирование текста */
 
-.portfolio-link{
+.portfolio-link {
     text-decoration: none;
-    font-size:14px;
+    font-size: 14px;
     letter-spacing: 1px;
     background-color: white;
-    color:rgb(33, 32, 32);
-    padding:10px 50px;
+    color: rgb(33, 32, 32);
+    padding: 10px 50px;
     border-radius: 10px;
-    border:2px solid;
+    border: 2px solid;
     animation: borderColorChange 2s linear infinite;
 }
+/* Стиль для ссылки на портфолио: без подчеркивания, размер шрифта, межбуквенный интервал,
+   фон, цвет текста, внутренние отступы, закругленные углы, рамка и анимация изменения цвета рамки */
 
 @keyframes borderColorChange {
     25% {
@@ -105,49 +119,52 @@ body{
         border-right-color: yellow;
         border-bottom-color: green;
         border-left-color: lightseagreen;
-        color:black;
+        color: black;
     }
     50% {
         border-top-color: lightseagreen;
         border-right-color: cyan;
         border-bottom-color: yellow;
         border-left-color: green;
-        color:white;
+        color: white;
     }
     75% {
         border-top-color: green;
         border-right-color: lightseagreen;
         border-bottom-color: cyan;
         border-left-color: yellow;
-        color:black;
+        color: black;
     }
     100% {
         border-top-color: yellow;
         border-right-color: green;
         border-bottom-color: lightseagreen;
         border-left-color: cyan;
-        color:white;
+        color: white;
     }
 }
+/* Определение анимации изменения цвета рамки и текста ссылки на портфолио */
 
-.qr-container{
-    position:relative;
-    height:100vh;
-    width:100%;
+.qr-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
 }
-.qr-img{
+/* Контейнер для QR-кода: относительное позиционирование, высота и ширина на 100% экрана */
+
+.qr-img {
     position: absolute;
-    margin:auto;
-    top:0;
-    left:0;
-    bottom:0;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
-    width:250px;
-    height:250px;
+    width: 250px;
+    height: 250px;
 }
+/* Внутренний контейнер для изображения QR-кода: абсолютное позиционирование, центрирование, размеры */
 
-.qr-img img{
-    width:250px;
+.qr-img img {
+    width: 250px;
 }
-
-
+/* Ширина изображения QR-кода */
